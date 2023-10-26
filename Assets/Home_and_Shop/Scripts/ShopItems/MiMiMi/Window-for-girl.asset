@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915a6f522f62942428807eab29eedffe, type: 3}
+  m_Name: Window-for-girl
+  m_EditorClassIdentifier: 
+  _publicName: "\u0426\u0432\u0435\u0442\u043E\u0447\u043D\u043E\u0435 \u043E\u043A\u043D\u043E"
+  _workingName: window-for-girl
+  _image: {fileID: 21300000, guid: d4cb245e018b4bf439ab6df7fb05390d, type: 3}
+  _price: 25
+  _isBuy: 0
+  _isInstall: 0
+  _isDefault: 0
+  _prefab: {fileID: 4092681969375330059, guid: 13d28c8389949d241a3219e81cc9bbae, type: 3}
+  _type: 0

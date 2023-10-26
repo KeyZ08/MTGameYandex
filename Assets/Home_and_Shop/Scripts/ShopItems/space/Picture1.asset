@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915a6f522f62942428807eab29eedffe, type: 3}
+  m_Name: Picture1
+  m_EditorClassIdentifier: 
+  _publicName: "\u041A\u0430\u0440\u0442\u0438\u043D\u0430-\u0446\u0432\u0435\u0442\u043E\u0447\u043A\u0438"
+  _workingName: picture-flowers
+  _image: {fileID: 21300000, guid: aed9da5264c171343acb73bafb8a6505, type: 3}
+  _price: 50
+  _isBuy: 1
+  _isInstall: 0
+  _isDefault: 0
+  _prefab: {fileID: 2712556563027096520, guid: 91820c5011494f44aa776211460dfd5b, type: 3}
+  _type: 6

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915a6f522f62942428807eab29eedffe, type: 3}
+  m_Name: Chandelier-flowers
+  m_EditorClassIdentifier: 
+  _publicName: "\u041B\u044E\u0441\u0442\u0440\u0430 \u0446\u0432\u0435\u0442\u043E\u0432"
+  _workingName: chandelier-flowers
+  _image: {fileID: 21300000, guid: 1123d27ccab8a2647ab9bd0ff2539091, type: 3}
+  _price: 100
+  _isBuy: 0
+  _isInstall: 0
+  _isDefault: 0
+  _prefab: {fileID: 1857572080598421611, guid: 73f2dcde4faac5940aaed601a679a138, type: 3}
+  _type: 3

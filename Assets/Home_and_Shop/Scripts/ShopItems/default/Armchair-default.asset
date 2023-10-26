@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915a6f522f62942428807eab29eedffe, type: 3}
+  m_Name: Armchair-default
+  m_EditorClassIdentifier: 
+  _publicName: "\u041A\u0440\u0435\u0441\u043B\u043E \u0434\u0435\u0434\u0430"
+  _workingName: armchair-default
+  _image: {fileID: 21300000, guid: 16d4dad1f3b1f7845ad5ce7a357efff8, type: 3}
+  _price: 0
+  _isBuy: 1
+  _isInstall: 1
+  _isDefault: 1
+  _prefab: {fileID: 2414469097352889391, guid: 233efafecf068f448a4c372769dfe135, type: 3}
+  _type: 1

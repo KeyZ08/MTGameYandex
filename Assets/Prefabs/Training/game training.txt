@@ -1,0 +1,49 @@
+Page1	 	- умножение на 0,1
+Page2 V1	- умножение на 10 + мотивация
+Page2 V2 	- умножение на 10 и на 2
+Page3 		- умножение = сложение
+Page4		- Таблица Пифагора
+Page5		- Лесной Бой
+Page6		- умножение на 3 + перестановка множителей
+Page7		- Дележка сокровищ
+Page8		- умножение на 4
+Page9		- умножение на 5
+Page10		- умножение на 6 (половина пустая)
+Page11		- умножение на 6 и 7 + (7 * 8 = 6 * 8 + 8 = 48 + 8 = 54)
+Page12		- умножение на 8 + пример с вычитанием
+Page13		- умножение на 9
+
+0,1,10
+Training	- Page1, PageV1
+
++ 2 + умножение = сложение
+Training2	- Page1, PageV2, Page3
+
++ Пифагор
+Training3	- Page1, PageV2, Page3, Page4, Page5
+
++ 3, перестановка
+Training4	- Page1, PageV2, Page3, Page4, Page5, Page6
+
++ дележка сокровищ
+Training5	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7
+
++ 4
+Training6	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7, Page8
+
++ 5
+Training7	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7, Page8, Page9
+
++ 6
+Training8 	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10
+
++ 7 + подсказка по сложению
+Training9 	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page11
+
++ 8 + подсказка по вычитанию
+Training10 	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page11, Page12		
+
++ 9
+Training11 	- Page1, PageV2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page11, Page12, Page13
+
+

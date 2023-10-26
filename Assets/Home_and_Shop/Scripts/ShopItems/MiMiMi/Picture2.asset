@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915a6f522f62942428807eab29eedffe, type: 3}
+  m_Name: Picture2
+  m_EditorClassIdentifier: 
+  _publicName: "\u041A\u0430\u0440\u0442\u0438\u043D\u0430-\u0446\u0432\u0435\u0442\u043E\u0447\u043A\u0438"
+  _workingName: picture-princess
+  _image: {fileID: 21300000, guid: a4270ba1476ac164f97ceb8fc2ba408a, type: 3}
+  _price: 50
+  _isBuy: 1
+  _isInstall: 1
+  _isDefault: 0
+  _prefab: {fileID: 7388819360122002858, guid: 404b4d77b463a734688070acf52a19a7, type: 3}
+  _type: 6

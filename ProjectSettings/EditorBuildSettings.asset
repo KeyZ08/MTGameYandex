@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: e35cb2bf23421bc4790df33c978cf707
+  - enabled: 1
+    path: Assets/Scenes/Game1.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/Game2.unity
+    guid: 3343e00701b350244a2e96e26e6062c5
+  - enabled: 1
+    path: Assets/Scenes/Game3.unity
+    guid: ee5d8eb8937549948a4b452626e427a5
+  - enabled: 1
+    path: Assets/Scenes/Game4.unity
+    guid: 2cc3d7721437fb44e8a941c25d59f436
+  - enabled: 1
+    path: Assets/Scenes/Game5.unity
+    guid: 1427a087c2f7668459d7fe1bd7628d0d
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 3d7ac6a408c35a54ba952b68b8b919b0
+  - enabled: 1
+    path: Assets/Scenes/InfinityGames/Game1Infinity.unity
+    guid: 298216252ff464946a3066b58c7c47d1
+  - enabled: 1
+    path: Assets/Scenes/InfinityGames/Game4Infinity.unity
+    guid: 3788c0389be55ce42a36d75dfd3eb87f
+  - enabled: 1
+    path: "Assets/Scenes/\u0421utscenes/CutsceneFox.unity"
+    guid: 75041f6b9b056914f984d2383a6ae6b9
+  - enabled: 1
+    path: "Assets/Scenes/\u0421utscenes/CutsceneBalloons.unity"
+    guid: bcfd6080f7c9cbf44b6de4988357fae9
+  - enabled: 1
+    path: "Assets/Scenes/\u0421utscenes/StartGame.unity"
+    guid: 49e68b4840b91354ead05bd4fffb4fde
+  - enabled: 1
+    path: "Assets/Scenes/\u0421utscenes/EndGame.unity"
+    guid: c7d0ffb4ec10104479ae19e8487393d2
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 966e9c4f3cf619046aa33bb8eba60021
+  - enabled: 1
+    path: Assets/Scenes/Interactive Learning/Game5Learning.unity
+    guid: b60c7e4dc1a028d40bc1d5917e3b481a
+  - enabled: 1
+    path: Assets/Scenes/Interactive Learning/Game4Learning.unity
+    guid: b6b9960ae79f8bc4cb68b5895e7f26cb
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 34ed46147478f954b8b0fc8ec791d122, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 3cabc8bc0cdbdd842b77420a65ff2593, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 1001833f17b828b4da16454b2d4db108, type: 2}
