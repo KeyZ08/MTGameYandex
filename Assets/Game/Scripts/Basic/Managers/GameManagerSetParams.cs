@@ -42,7 +42,7 @@ public abstract class GameManagerSetParams : LevelUIs
     protected virtual void SetParams(LevelGame1 l)
     {
         var manager = FindAnyObjectByType<ManagerGame1>();
-        manager.SetParams(l.UsedNums, l.ExamplesCount, l.NullInResult);
+        manager.Constructor(l.UsedNums, l.ExamplesCount, l.NullInResult);
         var canvas = GameObject.FindGameObjectWithTag("MainCanvas");
         Instantiate(Backgrounds[l.BackgroundImage], canvas.transform);
     }

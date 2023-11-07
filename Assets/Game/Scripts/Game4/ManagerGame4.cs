@@ -269,7 +269,7 @@ public class ManagerGame4 : MonoBehaviour
         if (newPos.x > 10)
         {
             StartCoroutine(WaitCoroutine(2f, () => {
-                FindAnyObjectByType<LevelUIs>().Lose();
+                FindAnyObjectByType<LevelUIs>().Lose(false);
             }));
         }
     }

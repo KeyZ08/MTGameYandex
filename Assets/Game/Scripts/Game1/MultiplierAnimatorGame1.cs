@@ -19,7 +19,6 @@ public class MultiplierAnimatorGame1 : MonoBehaviour
     private MultiplierGame1 _multiplier;
     private Animator _anim;
 
-
     private void Awake()
     {
         _multiplier = GetComponent<MultiplierGame1>();
@@ -109,7 +108,7 @@ public class MultiplierAnimatorGame1 : MonoBehaviour
         StartCoroutine(MoveAndShowMistakesOrRightCoroutine(f, choices));
     }
 
-    public IEnumerator MoveCoroutine(FigureGame1 f, Transform endPos, Transform choices)
+    public IEnumerator MoveCoroutine(FigureGame1 f, Transform endPos, Transform choices, bool setIntractableTrueOnEnd = true)
     {
         choices.GetComponent<HorizontalLayoutGroup>().enabled = false;
         var tr = f.transform;
@@ -125,15 +124,16 @@ public class MultiplierAnimatorGame1 : MonoBehaviour
         else 
             f.transform.SetParent(choices);
 
-        SetFiguresInteractable(true);
+        if(setIntractableTrueOnEnd)
+            SetFiguresInteractable(true);
     }
 
     private IEnumerator MoveAndShowMistakesOrRightCoroutine(FigureGame1 f, Transform choices)
     {
-        yield return MoveCoroutine(f, _multiplier.GetPostition(f), choices);
+        yield return MoveCoroutine(f, _multiplier.GetPostition(f), choices, false);
+        SetFiguresInteractable(false);
         if (_multiplier.CheckNotNull())
         {
-            SetFiguresInteractable(false);
             if (_multiplier.IsValid())
             {
                 SetCorrectView();
@@ -146,17 +146,18 @@ public class MultiplierAnimatorGame1 : MonoBehaviour
             }
             else
             {
-
                 ExampleFail.Play();
                 SetIncorrectView();
                 yield return new WaitForSeconds(0.5f);
                 SetDefaultView();
                 ShowMistake();
                 _multiplier.Mistaken();
+
+                yield return MoveCoroutine(f, f.startPosition, choices);
                 _multiplier.RemoveFigure(f);
                 //Debug.Log("Неверно!");
             }
-            SetFiguresInteractable(true);
         }
+        SetFiguresInteractable(true);
     }
 }

@@ -15,9 +15,10 @@ MonoBehaviour:
   _publicName: "\u041A\u0440\u0430\u0441\u043A\u0438"
   _workingName: miniTable1
   _image: {fileID: 21300000, guid: 79dbe38a60c01e64c9acf797ba45a919, type: 3}
-  _price: 20
-  _isBuy: 0
-  _isInstall: 0
+  _price: 1
+  _forAds: 1
+  _isBuy: 1
+  _isInstall: 1
   _isDefault: 0
   _prefab: {fileID: 2993416905961675143, guid: 126397af7ecedc94c89913d60bd7a6db, type: 3}
   _type: 8

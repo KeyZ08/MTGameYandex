@@ -1,5 +1,6 @@
 using Game;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,26 +25,25 @@ public class MainMenu : MonoBehaviour
     private GameObject hero;
     private AudioManager audioManager;
 
-    private void Awake()
+    //private IEnumerator Start()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    YandexGame.ResetSaveProgress();
+    //    YandexGame.SaveProgress();
+    //    //Обязательно удалить или закомментить! это для отладки
+    //    //YandexGame.savesData.Statistic = null;
+    //    //YandexGame.ResetSaveProgress();
+    //    //YandexGame.savesData.FirstGame = 1;
+    //    //YandexGame.savesData.PlayerMoney = 500;
+    //    //YandexGame.savesData.LastInteractiveTraining = 0;
+    //    //YandexGame.savesData.LastLevel = 9;
+
+    //    //YandexGame.SaveProgress();
+    //}
+
+    private IEnumerator Start()
     {
-        //Обязательно удалить или закомментить! это для отладки
-        //YandexGame.savesData.Statistic = null;
-        //YandexGame.ResetSaveProgress();
-        //YandexGame.savesData.FirstGame = 1;
-        //YandexGame.savesData.PlayerMoney = 500;
-        //YandexGame.savesData.LastInteractiveTraining = 0;
-        //YandexGame.savesData.LastLevel = 9;
-        
-        //YandexGame.SaveProgress();
-
-
-        Application.targetFrameRate = 60;
-        audioManager = GetComponent<AudioManager>();
-        hero = GameObject.FindGameObjectWithTag("Player");
-        hero.GetComponent<Animator>().SetBool("fly", true);
-        Time.timeScale = 1;
-
-        BtnPlay.onClick.AddListener(() => { SceneManager.LoadScene("Map"); });
+        yield return new WaitForSeconds(0.5f);
 
         var lastLevel = LevelManager.LastLevel;
         if (lastLevel == Map.Levels.Count)
@@ -53,6 +53,17 @@ public class MainMenu : MonoBehaviour
 
         Sounds.SetValue(audioManager.SoundIsPlayed);
         Music.SetValue(audioManager.MusicIsPlayed);
+    }
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+        audioManager = GetComponent<AudioManager>();
+        hero = GameObject.FindGameObjectWithTag("Player");
+        hero.GetComponent<Animator>().SetBool("fly", true);
+        Time.timeScale = 1;
+
+        BtnPlay.onClick.AddListener(() => { SceneManager.LoadScene("Map"); });
     }
 
     private void SetTrainingBook(TrainingSettings trainingSettings)

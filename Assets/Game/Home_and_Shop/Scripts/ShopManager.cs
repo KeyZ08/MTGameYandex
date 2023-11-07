@@ -1,10 +1,12 @@
 using SimpleJSON;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityJSON;
 using YG;
+using YG.Example;
 using JSON = UnityJSON.JSON;
 
 public class ShopManager : MonoBehaviour
@@ -103,7 +105,10 @@ public class ShopManager : MonoBehaviour
                 PayDisplay.SetItem(obj.Item);
                 PayDisplay.gameObject.SetActive(true);
                 PayDisplay.Pay.onClick.RemoveAllListeners();
-                PayDisplay.Pay.onClick.AddListener(() => { Buy(obj.Item); PayDisplay.gameObject.SetActive(false); });
+                if (!obj.Item.ForAds)
+                    PayDisplay.Pay.onClick.AddListener(() => { Buy(obj.Item); PayDisplay.gameObject.SetActive(false); });
+                else
+                    PayDisplay.Pay.onClick.AddListener(() => { BuyForAds(obj.Item); PayDisplay.gameObject.SetActive(false); });
             });
         return obj;
     }
@@ -173,6 +178,25 @@ public class ShopManager : MonoBehaviour
             karmanObjects.Add(item, kObj.gameObject);
         }
         Save();
+    }
+
+    public void BuyForAds(ShopItem item)
+    {
+        var ads = FindAnyObjectByType<AdsInitializer>().GetComponent<RewardedAds>();
+        ads.ShowAd();
+        StartCoroutine(ads.WaitAdsCoroutine(
+            () => 
+            {
+                MagazinItemRemove(item);
+                var kObj = KarmanItemCreate();
+                kObj.SetItem(item);
+                karmanObjects.Add(item, kObj.gameObject);
+            },
+            () =>
+            {
+                Debug.Log($"ќшибка, {item.Name} не даем тк c рекламой что-то не так");
+            }
+            ));
     }
 
     public void UnBuy(ShopItem item)

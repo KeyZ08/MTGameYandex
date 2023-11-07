@@ -4,11 +4,13 @@ using YG;
 public class AdsInitializer : MonoBehaviour
 {
     private bool isPlayed;
-    public bool IsPlayed { get { return isPlayed; } }
     private AudioManager audioManager;
+
+    public bool IsPlayed { get { return isPlayed; } }
 
     private void Awake()
     {
+        audioManager = GetComponent<AudioManager>();
         var obj = GameObject.FindGameObjectsWithTag("Ads");
         if (obj.Length > 1)
         {
@@ -26,21 +28,12 @@ public class AdsInitializer : MonoBehaviour
 
     private void CheckSDK()
     {
-        YandexGame.CloseFullAdEvent += () 
-            => { CloseShow(); Debug.Log("FullscreenAd Close"); };
-
-        YandexGame.ErrorFullAdEvent += () 
-            => { CloseShow(); Debug.Log("Fullscreen Error"); };
-
-        YandexGame.OpenFullAdEvent += ()
-            => { StartShow(); Debug.Log("FullscreenAd Show"); };
-
         if (YandexGame.auth)
             Debug.Log("User auth OK");
         else
         {
             Debug.Log("User auth ERROR");
-            YandexGame.AuthDialog();
+            //YandexGame.AuthDialog();
         }
     }
 
@@ -50,7 +43,7 @@ public class AdsInitializer : MonoBehaviour
         isPlayed = true;
     }
 
-    private void CloseShow()
+    public void EndShow()
     {
         audioManager.MasterVolumeChange(0);
         isPlayed = false;

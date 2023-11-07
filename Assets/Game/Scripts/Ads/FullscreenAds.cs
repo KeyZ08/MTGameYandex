@@ -8,6 +8,18 @@ public class FullscreenAds : MonoBehaviour
     public AdsInitializer instance;
     private DateTime lastShow;
 
+    private void OnEnable()
+    {
+        YandexGame.CloseFullAdEvent += ()
+            => { EndShow(); Debug.Log("FullscreenAd Close"); };
+
+        YandexGame.ErrorFullAdEvent += ()
+            => { EndShow(); Debug.Log("Fullscreen Error"); };
+
+        YandexGame.OpenFullAdEvent += ()
+            => { StartShow(); Debug.Log("FullscreenAd Show"); };
+    }
+
     public void ShowAd()
     {
         Debug.Log("между рекламами прошло: " + Math.Abs((DateTime.UtcNow - lastShow).TotalSeconds) + " секунд");
@@ -16,6 +28,10 @@ public class FullscreenAds : MonoBehaviour
             YandexGame.FullscreenShow();
         }
     }
+
+    private void StartShow() => instance.StartShow();
+
+    private void EndShow() => instance.EndShow();
 
     public IEnumerator WaitAdsCoroutine(Action action)
     {

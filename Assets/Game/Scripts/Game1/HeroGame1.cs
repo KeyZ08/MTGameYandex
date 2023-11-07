@@ -3,18 +3,24 @@ using UnityEngine;
 public class HeroGame1 : MonoBehaviour
 {
     public GameObject magicCast;
-    Animator anim;
+    private Animator anim;
+    private ManagerGame1 manager;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        manager = FindAnyObjectByType<ManagerGame1>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            FindAnyObjectByType<LevelUIs>().Lose();
+            var lose = FindAnyObjectByType<LevelUIs>().Lose(true);
+            StartCoroutine(lose.WaitClickResetLoseCoroutine(() =>
+            {
+                manager.CorrectExample(new int[0]);
+            }));
         }
     }
 

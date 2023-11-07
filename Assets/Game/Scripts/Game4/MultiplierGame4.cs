@@ -102,7 +102,9 @@ public class MultiplierGame4 : MultiplierBase
     private FigureBase ChoiceSpawn(int num)
     {
         if (_unactiveChoices.Count == 0) { return null; }
-        var width = _rectChoicesTransform.sizeDelta.x - 1f;
+        var corners = new Vector3[4];
+        _rectChoicesTransform.GetWorldCorners(corners);
+        var width = corners[3].x - corners[0].x - 1f;
         var spawnPos = new Vector2(Random.Range(transform.position.x - width / 2, transform.position.x + width / 2), choices.position.y - 0.5f);
         var figure = _unactiveChoices[_unactiveChoices.Count - 1] as FigureGame4;
         figure.SetPosition(spawnPos);

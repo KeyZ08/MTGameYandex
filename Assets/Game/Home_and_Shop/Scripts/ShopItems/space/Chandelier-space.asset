@@ -15,7 +15,8 @@ MonoBehaviour:
   _publicName: "\u041B\u044E\u0441\u0442\u0440\u0430 \u043A\u043E\u0441\u043C\u043E\u043D\u0430\u0432\u0442\u0430"
   _workingName: chandelier-space
   _image: {fileID: 21300000, guid: 509c9d0711739e34aa4866c9b6ba5e1f, type: 3}
-  _price: 120
+  _price: 1
+  _forAds: 1
   _isBuy: 0
   _isInstall: 0
   _isDefault: 0

@@ -15,7 +15,8 @@ MonoBehaviour:
   _publicName: "\u041A\u0430\u0440\u0442\u0438\u043D\u0430-\u0446\u0432\u0435\u0442\u043E\u0447\u043A\u0438"
   _workingName: picture-princess
   _image: {fileID: 21300000, guid: a4270ba1476ac164f97ceb8fc2ba408a, type: 3}
-  _price: 50
+  _price: 1
+  _forAds: 1
   _isBuy: 1
   _isInstall: 1
   _isDefault: 0

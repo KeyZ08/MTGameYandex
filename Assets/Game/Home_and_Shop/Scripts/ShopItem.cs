@@ -7,6 +7,7 @@ public class ShopItem : ScriptableObject
     [SerializeField] private string _workingName;
     [SerializeField] private Sprite _image;
     [SerializeField] private int _price;
+    [SerializeField] private bool _forAds;
     [SerializeField] private bool _isBuy;
     [SerializeField] private bool _isInstall;
     [SerializeField] private bool _isDefault;
@@ -18,6 +19,7 @@ public class ShopItem : ScriptableObject
     public string WorkingName { get => _workingName; }
     public Sprite Image { get => _image; }
     public int Price { get => _price; }
+    public bool ForAds { get => _forAds; }
     public bool IsBuy { get => _isBuy; }
     public bool IsInstall { get => _isInstall; }
     public bool IsDefault { get => _isDefault; }
@@ -39,7 +41,6 @@ public class ShopItem : ScriptableObject
         _isDefault = isDefault;
     }
 }
-
 
 public enum ShopItemType
 {

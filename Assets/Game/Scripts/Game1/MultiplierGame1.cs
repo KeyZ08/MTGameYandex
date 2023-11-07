@@ -142,8 +142,8 @@ public class MultiplierGame1 : MultiplierBase
     {
         if (InMultiplier(f))
         {
-            _exampleAnimator.SetDefaultView();
-            RemoveFigure(f);
+            //_exampleAnimator.SetDefaultView();
+            //RemoveFigure(f);
         }
         else if (CheckNotNull())
         {

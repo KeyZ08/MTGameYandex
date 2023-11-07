@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using YG;
 using Random = UnityEngine.Random;
 
 public class ManagerGame1 : MonoBehaviour
@@ -22,15 +24,12 @@ public class ManagerGame1 : MonoBehaviour
     private bool[] UsedNums;
     private GameManagerSetParams manager;
 
-    public void SetParams(bool[] usedNums, int examplesCount, bool nullInResult)
+    public void Constructor(bool[] usedNums, int examplesCount, bool nullInResult)
     {
         UsedNums = usedNums;
         ExamplesCount = examplesCount;
         NullInResult = nullInResult;
-    }
 
-    public void Start()
-    {
         manager = GetComponent<GameManagerSetParams>();
         if (monsters.Count == 0) throw new ArgumentNullException("Нет монстров");
         exampels = ExamplesGenerator(UsedNums, ExamplesCount, NullInResult);
@@ -74,6 +73,11 @@ public class ManagerGame1 : MonoBehaviour
         if (manager is InfinityGameManager)
         {
             Statistic.Current.AddRight(nums);
+            if (YandexGame.initializedLB)
+            {
+                var allRight = Statistic.Statistics.Sum(x => x.RightCount);
+                YandexGame.NewLeaderboardScores("statisticInfinityGame", allRight);
+            }
         }
         hero.Attack();
         if (_monsterCount > 0) 

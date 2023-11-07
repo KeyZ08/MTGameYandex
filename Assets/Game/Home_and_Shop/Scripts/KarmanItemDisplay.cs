@@ -11,6 +11,9 @@ public class KarmanItemDisplay : MonoBehaviour
     public Button Install;
     public Button UnInstall;
 
+    [SerializeField] private Image money;
+    [SerializeField] private Image ads;
+
     private ShopManager _manager;
 
     private void Awake()
@@ -22,12 +25,22 @@ public class KarmanItemDisplay : MonoBehaviour
     {
         Price.text = item.Price.ToString();
         Image.sprite = item.Image;
-        UnBuy.interactable = !item.IsDefault;
+        UnBuy.interactable = !item.IsDefault && !item.ForAds;
         PriceObject.SetActive(!item.IsDefault);
 
         Install.gameObject.SetActive(!item.IsInstall);
         UnInstall.gameObject.SetActive(item.IsInstall);
-        
+
+        if (item.ForAds)
+        {
+            money.gameObject.SetActive(false);
+            ads.gameObject.SetActive(true);
+        }
+        else
+        {
+            money.gameObject.SetActive(true);
+            ads.gameObject.SetActive(false);
+        }
 
         Install.onClick.RemoveAllListeners();
         Install.onClick.AddListener(() =>

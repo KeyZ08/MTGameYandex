@@ -1,5 +1,5 @@
 {
-    "idSave": 90,
+    "idSave": 76,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -10,16 +10,16 @@
         true,
         false
     ],
-    "ActiveLevel": 0,
-    "LastLevel": 3,
-    "PlayerMoney": 20,
-    "LastInteractiveTraining": -1,
-    "LastTraining": 3,
+    "ActiveLevel": 4,
+    "LastLevel": 11,
+    "PlayerMoney": 160,
+    "LastInteractiveTraining": 10,
+    "LastTraining": 11,
     "FirstGame": 1,
     "EndGame": 0,
     "Music": 0.0,
     "Sounds": 0.0,
-    "InfinityGameSettings": "[3,4]",
-    "Statistic": "[{\"Date\":{\"day\":27,\"month\":10,\"year\":2023},\"Right\":[0,1,0,5,5,0,2,1,0,3,1],\"Incorrect\":[0,0,0,2,0,0,4,1,0,3,0],\"RightCount\":9,\"IncorrectCount\":5}]",
-    "Shop": "{\"armchair-space\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"armchair-for-girls\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"picture-flowers\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"picture-princess\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"Table-space\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"Padded-stool1\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"window-space\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"window-for-girl\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"chandelier-space\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"chandelier-flowers\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"easel-space\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"big-flower1\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"carpet-blue\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"carpet-yellow\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"miniTable1\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"Garland-space\":{\"Item1\":false,\"Item2\":false,\"Item3\":false},\"armchair-default\":{\"Item1\":true,\"Item2\":false,\"Item3\":true},\"chandelier-default\":{\"Item1\":true,\"Item2\":true,\"Item3\":true},\"box-default\":{\"Item1\":true,\"Item2\":false,\"Item3\":true},\"window-default\":{\"Item1\":true,\"Item2\":true,\"Item3\":true},\"Table-default\":{\"Item1\":true,\"Item2\":false,\"Item3\":true}}"
+    "InfinityGameSettings": "",
+    "Statistic": "",
+    "Shop": ""
 }

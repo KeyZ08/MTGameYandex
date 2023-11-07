@@ -18,9 +18,10 @@ public abstract class LevelUIs : MonoBehaviour
         win.Show();
     }
 
-    public virtual void Lose()
+    public virtual Lose Lose(bool resetLoseBtnActive)
     {
-        lose.Show();
+        lose.Show(resetLoseBtnActive);
+        return lose;
     }
 
     public virtual void MainMenu()
