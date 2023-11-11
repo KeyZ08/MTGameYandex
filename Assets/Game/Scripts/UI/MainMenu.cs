@@ -22,8 +22,12 @@ public class MainMenu : MonoBehaviour
     [Header("TrainingPrefabs")]
     public GameObject[] AllTrainingBooks;
 
+    [Header("Loading")]
+    public GameObject loadingPanel;
+
     private GameObject hero;
     private AudioManager audioManager;
+
 
     //private IEnumerator Start()
     //{
@@ -43,7 +47,14 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.5f);
+        loadingPanel.SetActive(true);
+        while (!YandexGame.SDKEnabled)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        loadingPanel.SetActive(false);
+        //YandexGame.ResetSaveProgress();
+        //YandexGame.SaveProgress();
 
         var lastLevel = LevelManager.LastLevel;
         if (lastLevel == Map.Levels.Count)

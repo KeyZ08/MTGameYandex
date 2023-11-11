@@ -1,5 +1,5 @@
 {
-    "idSave": 76,
+    "idSave": 5,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -10,11 +10,11 @@
         true,
         false
     ],
-    "ActiveLevel": 4,
-    "LastLevel": 11,
-    "PlayerMoney": 160,
-    "LastInteractiveTraining": 10,
-    "LastTraining": 11,
+    "ActiveLevel": 0,
+    "LastLevel": 0,
+    "PlayerMoney": 0,
+    "LastInteractiveTraining": -1,
+    "LastTraining": 0,
     "FirstGame": 1,
     "EndGame": 0,
     "Music": 0.0,
