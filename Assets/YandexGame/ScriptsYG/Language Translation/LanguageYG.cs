@@ -59,7 +59,7 @@ namespace YG
 
         public InfoYG GetInfoYG() // For editor
         {
-            YandexGame yg = (YandexGame)GameObject.FindAnyObjectByType<YandexGame>();
+            YandexGame yg = FindAnyObjectByType<YandexGame>();
 
             if (yg)
             {

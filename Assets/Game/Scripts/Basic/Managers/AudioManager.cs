@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
         AudioMixer = Resources.Load<AudioMixer>("MainMixer");
     }
 
-    private void Start()
+    public void Init()
     {
         var m = YandexGame.savesData.Music;
         var s = YandexGame.savesData.Sounds;

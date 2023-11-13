@@ -15,7 +15,7 @@ namespace YG
         public int money = 1;                       // Можно задать полям значения по умолчанию
         public string newPlayerName = "DefaultName!";
         public bool[] openLevels = new bool[3];
-
+         
         // Ваши сохранения
         public int ActiveLevel = int.MinValue;
         public int LastLevel = 0;
@@ -24,7 +24,7 @@ namespace YG
         public int LastInteractiveTraining = -1;
         public int LastTraining = -1;
 
-        public int FirstGame = 0;
+        public int FirstGame = 0; 
         public int EndGame = 0;
 
         public float Music;

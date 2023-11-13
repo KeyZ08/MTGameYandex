@@ -54,6 +54,7 @@ public class MainMenu : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.5f);
             }
+            YandexGame.GameReadyAPI();
             loadingPanel.SetActive(false);
         }
         //YandexGame.ResetSaveProgress();
@@ -65,6 +66,7 @@ public class MainMenu : MonoBehaviour
         var level = Map.Levels[lastLevel];
         SetTrainingBook(level.Training);
 
+        audioManager.Init();
         Sounds.SetValue(audioManager.SoundIsPlayed);
         Music.SetValue(audioManager.MusicIsPlayed);
     }
