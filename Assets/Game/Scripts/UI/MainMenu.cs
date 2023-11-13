@@ -47,12 +47,15 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator Start()
     {
-        loadingPanel.SetActive(true);
-        while (!YandexGame.SDKEnabled)
+        if (!YandexGame.SDKEnabled)
         {
-            yield return new WaitForSeconds(0.5f);
+            loadingPanel.SetActive(true);
+            while (!YandexGame.SDKEnabled)
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            loadingPanel.SetActive(false);
         }
-        loadingPanel.SetActive(false);
         //YandexGame.ResetSaveProgress();
         //YandexGame.SaveProgress();
 
