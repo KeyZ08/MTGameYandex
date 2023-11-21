@@ -31,9 +31,9 @@ Material:
     - _OutlineWidth: 0
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.82124996
-    - _ScaleRatioC: 0.7942456
-    - _UnderlayDilate: 1
+    - _ScaleRatioC: 0.82124996
+    - _UnderlayDilate: 0.845
     - _UnderlayOffsetX: 0
-    - _UnderlaySoftness: 0.034
+    - _UnderlaySoftness: 0
     m_Colors: []
   m_BuildTextureStacks: []

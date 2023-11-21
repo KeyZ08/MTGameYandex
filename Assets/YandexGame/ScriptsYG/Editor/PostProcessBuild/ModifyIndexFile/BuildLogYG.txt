@@ -1,2 +1,2 @@
 Build path: D:/Рабочий стол/MTGameYandex/MTGameY
-Build number: 20
+Build number: 28

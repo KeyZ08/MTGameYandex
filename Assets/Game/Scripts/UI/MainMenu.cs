@@ -54,9 +54,9 @@ public class MainMenu : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.5f);
             }
-            YandexGame.GameReadyAPI();
             loadingPanel.SetActive(false);
         }
+        YandexGame.GameReadyAPI();
         //YandexGame.ResetSaveProgress();
         //YandexGame.SaveProgress();
 
